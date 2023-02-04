@@ -16,3 +16,6 @@ rocketmq:
   producer:
     group: my-group
 
+liteflow:
+  rule-source: config/flow.el.xml
+
