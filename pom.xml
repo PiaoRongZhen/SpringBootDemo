@@ -46,8 +46,8 @@
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>lock4j-redisson-spring-boot-starter</artifactId>
-            <version>2.2.3</version>
+            <artifactId>lock4j-redis-template-spring-boot-starter</artifactId>
+            <version>2.2.4</version>
         </dependency>
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
