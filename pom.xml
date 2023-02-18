@@ -79,6 +79,11 @@
             <artifactId>liteflow-spring-boot-starter</artifactId>
             <version>2.9.6</version>
         </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>3.6.1</version>
+        </dependency>
     </dependencies>
 
     <build>

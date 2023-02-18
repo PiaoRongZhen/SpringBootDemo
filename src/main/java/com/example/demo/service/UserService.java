@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.demo.domain.User;
 import com.example.demo.mapper.UserMapper;
@@ -21,6 +22,7 @@ public class UserService {
      *
      * @return
      */
+    @DS("demo")
     public List<User> list() {
         Page<User> page = new Page<>(1, 1);
         page = userMapper.selectPage(page, null);
@@ -33,6 +35,7 @@ public class UserService {
      * @param id
      * @param age
      */
+    @DS("test")
     @Transactional(isolation = Isolation.READ_COMMITTED, rollbackFor = Exception.class)
     public void update(Long id, Integer age) {
         User user = userMapper.selectById(id);
