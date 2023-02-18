@@ -10,6 +10,7 @@ import com.example.demo.domain.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,6 +29,11 @@ public class UserController {
     @SaCheckPermission(value = {"user.add", "user.update", "user.get"}, mode = SaMode.OR)
     public List<User> list() {
         return userService.list();
+    }
+
+    @PostMapping("/update")
+    public void update(Long id, Integer age) {
+        userService.update(id, age);
     }
 
     @RequestMapping("doLogin")
